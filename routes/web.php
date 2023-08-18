@@ -14,9 +14,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+/* AUTH ROUTES */
+Route::get("/admin/login", function() {
+    return view("admin.auth.login");
+});
+Route::get("/admin/register", function() {
+    return view("admin.auth.register");
+});
+
+
 Route::get('/', function () {
     return view('welcome');
 });
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
